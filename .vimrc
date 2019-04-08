@@ -1,5 +1,22 @@
 set foldmethod=syntax
 set nu
+colorscheme natedesert
+
+" Interface settings
+set listchars=tab:▸\ ,eol:¬
+set list
+
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
+
+" Handy settings
+"
+" Command Sw will 'sudo write' the file
+" Useful when you forget to open the file as root
+command! Sw silent w !sudo tee %
+
+
+
 
 " The following settings are for Vundle.
 set nocompatible              " be iMproved, required
@@ -14,9 +31,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'fatih/vim-go'
-Plugin 'SirVer/ultisnips'
+Plugin 'fatih/vim-go'		" GoLang support
+Plugin 'SirVer/ultisnips'	" Auto fill common code snips
 Plugin 'Konfekt/FastFold'
+Plugin 'bfrg/vim-cpp-modern'	" C++ highlighting
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
