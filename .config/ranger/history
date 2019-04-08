@@ -1,0 +1,16 @@
+mkdir web
+mkdir csstests
+touch cssicon.html
+touch cssicon.css
+mkdir moss-coffee
+shell 
+
+delete
+wq
+rename natedesert.vim
+mkdir .vim
+mkdir colors
+mkdir holding
+doc
+search doc
+search ranger
