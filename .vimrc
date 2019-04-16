@@ -85,4 +85,4 @@ function! RangeChooser()
     redraw!
 endfunction
 command! -bar RangerChooser call RangeChooser()
-nnoremap g :<C-U>RangerChooser<CR>
+"nnoremap g :<C-U>RangerChooser<CR>
