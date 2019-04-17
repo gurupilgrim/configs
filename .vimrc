@@ -1,14 +1,30 @@
 set foldmethod=syntax
 set nu
 set mouse=a
-colorscheme natedesert
 
 " Interface settings
+colorscheme natedesert
+let g:airline_theme='badwolf'
+
 set listchars=tab:▸\ ,eol:¬
 set list
+set t_Co=256
 
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
+
+let g:airline_left_sep='🞂' " the separator used on the left side >
+let g:airline_right_sep='🞀' " the separator used on the right side >
+let g:airline_detect_modified=1 " enable modified detection >
+let g:airline_detect_paste=1 " enable paste detection >
+let g:airline_detect_crypt=1 " enable crypt detection >
+let g:airline_detect_spell=1 " enable spell detection >
+let g:airline_detect_spelllang=1 " display spelling language when spell detection is enabled (if enough space is available)
+let g:airline_detect_iminsert=0 " enable iminsert detection >
+" determine whether inactive windows should have the left section collapsed to only the filename of that buffer.
+let g:airline_inactive_collapse=1
+let g:airline_inactive_alt_sep=1 " Use alternative seperators for the statusline of inactive windows >
+
 
 " Handy settings
 "
@@ -36,6 +52,8 @@ Plugin 'fatih/vim-go'		" GoLang support
 Plugin 'SirVer/ultisnips'	" Auto fill common code snips
 Plugin 'Konfekt/FastFold'
 Plugin 'bfrg/vim-cpp-modern'	" C++ highlighting
+Plugin 'vim-airline/vim-airline'	" status bar
+Plugin 'vim-airline/vim-airline-themes'	
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -85,4 +103,4 @@ function! RangeChooser()
     redraw!
 endfunction
 command! -bar RangerChooser call RangeChooser()
-"nnoremap g :<C-U>RangerChooser<CR>
+nnoremap gr :<C-U>RangerChooser<CR>
