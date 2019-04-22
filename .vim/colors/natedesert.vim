@@ -105,6 +105,10 @@ hi Ignore	cterm=bold ctermfg=7
 hi Ignore	ctermfg=darkgrey
 hi Error	cterm=bold ctermfg=7 ctermbg=1
 
+" My custom additions
+hi Pmenu	ctermbg=27 ctermfg=white
+hi PmenuSel	ctermbg=yellow ctermfg=black
+
 
 "vim: sw=4
 
