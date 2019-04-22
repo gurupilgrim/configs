@@ -1,10 +1,15 @@
 set foldmethod=syntax
 set nu
 set mouse=a
+set splitbelow
+set splitright
+
 
 " Interface settings
 colorscheme natedesert
 let g:airline_theme='badwolf'
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_yarp = 1
 
 set listchars=tab:▸\ ,eol:¬
 set list
@@ -40,23 +45,27 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
+call plug#begin('~/.vim/plugged')
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+"Plug 'VundleVim/Vundle.vim'
 
-Plugin 'fatih/vim-go'		" GoLang support
-Plugin 'SirVer/ultisnips'	" Auto fill common code snips
-Plugin 'Konfekt/FastFold'
-Plugin 'bfrg/vim-cpp-modern'	" C++ highlighting
-Plugin 'vim-airline/vim-airline'	" status bar
-Plugin 'vim-airline/vim-airline-themes'	
+Plug 'fatih/vim-go'				" GoLang support
+Plug 'SirVer/ultisnips'				" Auto fill common code snips
+Plug 'Konfekt/FastFold'
+Plug 'bfrg/vim-cpp-modern'			" C++ highlighting
+Plug 'vim-airline/vim-airline'			" status bar
+Plug 'vim-airline/vim-airline-themes'	
+Plug 'maralla/completor.vim'			" autocompletion
+
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+"call vundle#end()            " required
+call plug#end()
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
