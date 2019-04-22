@@ -61,6 +61,7 @@ Plug 'bfrg/vim-cpp-modern'			" C++ highlighting
 Plug 'vim-airline/vim-airline'			" status bar
 Plug 'vim-airline/vim-airline-themes'	
 Plug 'maralla/completor.vim'			" autocompletion
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 
 
 " All of your Plugins must be added before the following line
