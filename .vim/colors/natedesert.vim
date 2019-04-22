@@ -74,7 +74,7 @@ hi NonText	cterm=bold ctermfg=darkgray
 hi Directory	ctermfg=darkcyan
 hi ErrorMsg	cterm=bold ctermfg=7 ctermbg=1
 hi IncSearch	cterm=NONE ctermfg=yellow ctermbg=green
-hi Search	cterm=NONE ctermfg=grey ctermbg=blue
+hi Search	cterm=NONE ctermfg=black ctermbg=yellow
 hi MoreMsg	ctermfg=darkgreen
 hi ModeMsg	cterm=NONE ctermfg=brown
 hi LineNr	ctermfg=3
