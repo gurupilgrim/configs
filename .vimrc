@@ -110,7 +110,24 @@ function! RangeChooser()
     for name in names[1:]
         exec 'argadd ' . fnameescape(name)
     endfor
-    redraw!
+    redraw
 endfunction
 command! -bar RangerChooser call RangeChooser()
 nnoremap gr :<C-U>RangerChooser<CR>
+
+" Toggle mouse
+function! ToggleMouse()
+    " check if mouse is enabled
+    if &mouse == 'a'
+        " disable mouse
+        set mouse=
+    else
+        " enable mouse everywhere
+        set mouse=a
+    endif
+endfunc
+
+map s <Nop> 
+command! -bar ToggleMouse call ToggleMouse()
+nnoremap sm :ToggleMouse<CR>
+
