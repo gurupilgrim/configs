@@ -130,4 +130,6 @@ endfunc
 map s <Nop> 
 command! -bar ToggleMouse call ToggleMouse()
 nnoremap sm :ToggleMouse<CR>
+nnoremap gb :GoBuild<CR>
+nnoremap gt :GoTest<CR>
 
